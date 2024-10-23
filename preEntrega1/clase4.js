@@ -3,12 +3,12 @@
 const autos = []
 
 function agregarAuto(){
-    let patente = parseInt(prompt("agregue la patente del auto a ingresar:"))
+    let patente = parseInt(prompt("Agregue los numeros de la patente del auto a ingresar:"))
     autos.push(patente) // Agregar el auto al array
 }
 // Opción para ver la lista de autos
 function mostrarPatentes(){
-    let listaPatente = "los autos ingresados son:"
+    let listaPatente = "Los autos ingresados son:"
     for(let i = 0; i<=autos.length; i++){
         alert(listaPatente  +  autos) 
      }
@@ -18,16 +18,21 @@ function mostrarPatentes(){
 function siguienteAuto(){
     let primerAuto = autos.shift()
     if(autos.length === 0){
-        alert(`ingresar el auto con patente ${primerAuto}`)
+        alert(`Ingresar el auto con patente ${primerAuto}`)
     } else {
-        alert(`ingresar el auto con patente ${primerAuto} y mover el auto con patente ${autos[0]}`)
+        alert(`Ingresar el auto con patente ${primerAuto} y mover el auto con patente ${autos[0]}`)
     }
 }
 
 // Busca una patente ingresada 
 const encontrarPatente = (autos) =>{
-    const indiceAutos = autos.indexOf(autos)
-    return(alert(`tenemos el auto ingresado en la lista`))
+    
+    if(autos.indexOf(encontrarPatente)){
+        return(alert(`Tenemos el auto ingresado en la lista`)) 
+    } else{
+        return(alert(`No tenemos el auto ${encontrarPatente}ingresado en la lista`)) 
+    }
+    
 }
 function seleccionarOpcion(opcion){
     switch(opcion){
@@ -52,11 +57,11 @@ function seleccionarOpcion(opcion){
 
 function tallerMecanico(){
     let loop = true
-    alert("buenos dias")
+    alert("Buenos dias")
     while(loop){
-        let opcion = parseInt(prompt("Elige una opcion: \n 1 - Agregar auto \n 2 -   Auto siguiente \n 3 - Buscar auto ingresado \n 4 - Ver lista de patentes "))
+        let opcion = parseInt(prompt("Elige una opcion: \n 1 - Agregar auto \n 2 - Auto siguiente \n 3 - Buscar auto ingresado \n 4 - Ver lista de patentes "))
         seleccionarOpcion(opcion)
-        loop = confirm("desea seguir operando?")
+        loop = confirm("Desea seguir operando?")
     }
     alert("Hasta luego")
 }
