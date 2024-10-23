@@ -9,17 +9,12 @@ function agregarAuto(){
 // Opción para ver la lista de autos
 function mostrarPatentes(){
     let listaPatente = "los autos ingresados son:"
-    
-    
-    
-     for(let i; i <= 0; i++){
-       
+    for(let i = 0; i<=autos.length; i++){
+        alert(listaPatente  +  autos) 
      }
-     
-     alert(listaPatente + autos)
-    }
+}
     
-
+// Ingresa el auto con el primer turno, lo elimina de la lista e indica que preparen el siguiente
 function siguienteAuto(){
     let primerAuto = autos.shift()
     if(autos.length === 0){
@@ -29,9 +24,10 @@ function siguienteAuto(){
     }
 }
 
+// Busca una patente ingresada 
 const encontrarPatente = (autos) =>{
     const indiceAutos = autos.indexOf(autos)
-    alert(`tenemos el auto ingresado con orden ${indiceAutos+1} en la lista}`)
+    return(alert(`tenemos el auto ingresado en la lista`))
 }
 function seleccionarOpcion(opcion){
     switch(opcion){
