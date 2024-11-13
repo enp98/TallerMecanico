@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador de Taller Mecánico</title>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Taller Mecánico</h1>
+    </header>
+    <br>
+    <main>
+      <div>
+        <input type="text" id="inputPatente" placeholder="Ingrese la patente del auto">
+        <button id="btnAgregarAuto">Agregar Auto</button>
+      </div>
+      <br>
+      <div>
+        <button id="btnSiguienteAuto">Siguiente Auto</button>
+        <button id="btnBuscarAuto">Buscar Auto</button>
+        <button id="btnMostrarPatentes">Mostrar Lista de Autos</button>
+      </div>
+    </main>
+    <br>
+    <footer>
+        <div id="resultado"></div>
+    </footer>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+
+      body{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        margin: 10vh;  
+      }
+
+
+    </style>
+</body>
+</html>
